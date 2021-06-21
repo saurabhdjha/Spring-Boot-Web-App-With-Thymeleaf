@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.demo.SpringBootThymleafCRUD.model.Employee;
@@ -39,6 +43,14 @@ public class EmployeeServiceImpl implements EmployeeService{
 			throw new RuntimeException(" Employee not found for id :: "+employeeId);
 		Employee employee=employeeOpt.get();
 		return employee;
+	}
+
+	@Override
+	public Page<Employee> findPaginatedData(Integer pageNo, Integer pageSize, String sortKey, String sortOrder) {
+		
+		Sort sort=sortOrder.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortKey).ascending() : Sort.by(sortKey).descending();
+		Pageable pageable=PageRequest.of(pageNo-1, pageSize, sort);		
+		return this.employeeRepository.findAll(pageable);
 	}
 
 	

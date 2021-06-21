@@ -137,4 +137,10 @@ HOW?
 *************PROJECT: Created Spring Boot + Thymeleaf project to perform CRUD operations***********************
              ----------------------------------------------------------------------------
 
-                                             
+
+################# UPDATE ############################
+
+Implemented Paging and Sorting concept.
+> On each page only 5 records will be displayed. 
+> Made headers of table sortable by providing hyperlinks   
+> provided toggling to change sorting back to original order.                                       

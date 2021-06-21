@@ -13,3 +13,5 @@ insert into employee(employee_id,first_name,last_name,email) values (1,'Saurabh'
 insert into employee(employee_id,first_name,last_name,email) values (2,'Ankit','Kumar','aKumar@yahoo.com');
 insert into employee(employee_id,first_name,last_name,email) values (3,'Rishu','Pal','rishuLion@gmail.com');
 insert into employee(employee_id,first_name,last_name,email) values (4,'Gouresh','Chauhan','gourseh@outlook.com');
+insert into employee(employee_id,first_name,last_name,email) values (5,'Bikramjeet','Singh','biki@gmail.com');
+insert into employee(employee_id,first_name,last_name,email) values (6,'Rohan','Agarwal','agarwal@yahoo.com');
